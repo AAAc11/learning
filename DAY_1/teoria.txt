@@ -1,0 +1,96 @@
+LISTY
+
+Podstawy
+    1. Tworzenie
+        list = []
+    2. Mutowalność-jest to możliwość edytowania obiektu (listy) po jej utworzeniu, np.:
+        lista[0] = 3 #zmiana elementu
+        lista.append(1) #dodanie elementu
+        lista.pop() #usunięcie ostatniego elementu
+    3. Indeksowanie
+        W listach mamy dostęp do danego elementu, np.:
+            lista[0]
+            lista[-1] #od końca
+    4. Slicing
+        Listy możemy dzielić na podlisty, np.:
+            lista[1:3]
+            lista[:2]
+            lista[4:]
+            lista[::3] #co trzeci element
+    5. Kopiowanie list
+        new_list = old.list.copy()
+        new_list = old.list[:]
+        new_list = old.list #nie tworzy kopii tylko nową referencję!
+Podstawowe metody (CRUD)
+    1. Create
+        lista.append(x) #dodaje x na koniec listy
+        lista.insert(i,x) #dodaje x na wybraną pozycję
+        lista.extend(lista2) #dodaje wszystkie elementy z drugiej listy
+    2. Read
+        x in lista #sprawdza czy x należy do listy
+        lista.index(x) #wyświetla pozcyję na której znajduje się x
+        lista.count(x) #liczby ile razy występuje x
+    3. Update
+        lista[i] = nowa_wartosc #przypisuje nową wartość do podanej pozycji
+    4. Delete
+        lista.pop(i) #usuwa pierwsze wystąpienie wartości x
+        lista.remove(x) #usuwa pierwsze wystąpienie wartości x
+        del lista[i] #usuwa element o danym indeksie
+Sortowanie
+    1. list.sort() #sortuje w miejscu, np.:
+	list.sort(reverse=True) #sortuje malejąco
+    2. sorted() #zwraca, nową posortowaną listę
+    3. parametr key
+	Wskazuje sposób, w jaki ma być posortowana lista, np.:
+		sorted(lista, key=len)) #sortuje po długości
+List Comprehensions
+    Jest to skrócona wersja tradycyjnej pętli tworzącej nową listę
+	Tradycyjnie:
+		numbers = [1, 2, 3, 4]
+		result = []
+		for x in numbers:
+    			result.append(x * 2)
+	List comprehension:
+		result = [x * 2 for x in numbers]
+	Z warunkiem IF:
+		result = [x * x for x in numbers if x % 2 == 0]
+	Z IF-ELSE:
+		result = ["parzysta" if x % 2 == 0 else "nieparzysta" for x in numbers]
+
+SŁOWNIKI
+
+Podstawy
+    1. Tworzenie
+        dict1 = {}
+    2. Struktura
+        klucz: wartość #klucze muszą być unikalne i muszą być stringami, liczbami lub krotkami
+
+Dostęp, Aktualizacja, Dodawanie (CRUD)
+    1. Dostęp(READ)
+        dict1['klucz'] #szybki dostęp, ale jeśli klucz nie istnieje wyrzuci błąd
+        dict1.get('klucz') #bezpieczny dostęp oraz jeśli klucz nie istnieje zwróci None
+        dict1.get('klucz','domyslna_wartosc') #najbezpieczniejszy dostęp
+    2. Dodawanie / Aktualizacja (Create / Update)
+        dict1['nowy klucz'] = 'wartosc' #doda nowy klucz lub nadpisze istniejący
+        dict.update(inny_slownik) #łączy dwa słowniki
+    3. Usuwanie (Delete)
+        del dict1['klucz'] #usuwa klucz i wartość przypisaną do klucza
+        dict1.pop('klucz') #bezpieczne usunięcie
+
+Iteracja
+    for key in dict1 #domyślnie iteruje po kluczach
+    for value in dict1.values() #iteruje po wartościach
+    for key, value in dict1.items() #pozwala do dostęp do klucz i wartości jednocześnie
+
+Dict Comprehensions
+    składnia:
+        {klucz: wartosc for element in lista}
+    np:
+        {x: x*x for x in [1,2,3] #rezultat: {1: 1, 2: 4, 3: 9}
+
+	
+
+
+
+
+
