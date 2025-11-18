@@ -1,0 +1,71 @@
+Funkcja - blok kodu, który przjmuje jakieś argumenty i zwraca jakąś wartość
+
+Argumenty Pozycyjne - podstawowy sposób przekazywania danych do funkcji, w którym liczy się kolejność, np.:
+def przywitanie(imie, nazwisko):
+    print(f"Witaj {imie} {nazwisko}!")
+def main():
+    przywitanie("ANNA", "NOWAK")
+
+Argumenty Nazwane - sposób, w którym podaje się nazwę prarametru, np.:
+    def przywitanie(imie, nazwisko):
+    print(f"Witaj {imie} {nazwisko}!")
+def main():
+    przywitanie(nazwisko="NOWAK",imie="ANNA")
+
+Nieogranczona liczba argumentów: *args i **kwargs
+
+*args (dla argumentów pozycyjnych)
+    W definicji funkcji, jako argument, można użyć *args (liczy się gwiazdka). Jest to przydatne,
+    gdy nie wiadomo ile argumentów poda użytkownik. Python zbiera wszystkie dodatkowe argumenty
+    pozycyjne do krotki, np.:
+        def pokaz_argumenty(pierwszy, *reszta):
+            print(f"Pierwszy argument: {pierwszy}")
+            print(f"Reszta argumentów (jako krotka): {reszta}")
+
+        pokaz_argumenty("A", "B", "C", "D")
+
+            # Wynik:
+            # Pierwszy argument: A
+            # Reszta argumentów (jako krotka): ('B', 'C', 'D')
+
+**kwargs (dla argumentów nazwanych)
+    Gdy w definicji funkcji użyjesz **kwargs to python zbierze wszystkie dodatkowe argumenty nazwane
+    do słownika, np.:
+        def pokaz_opcje(typ, **dodatkowe_opcje):
+            print(f"Typ: {typ}")
+            print(f"Dodatkowe opcje (jako słownik): {dodatkowe_opcje}")
+
+        pokaz_opcje(typ="Admin", wiek=30, kraj="Polska", status="Aktywny")
+            # Wynik:
+            # Typ: Admin
+            # Dodatkowe opcje (jako słownik): {'wiek': 30, 'kraj': 'Polska', 'status': 'Aktywny'}
+
+Return w funkcji
+    Każda funkcja coś zwraca. Nawet jeśli w funkcji nie ma 'return', to sama automatycznie zwraca None
+
+
+Funkcja jako argument (Callback)
+    Jest to użycie innej funkcji jako argument funkcji, np.:
+        def podnies_do_kwadratu(n):
+            return n * n
+
+        def dodaj_dwa(n):
+            return n + 2
+
+        # Funkcja wyższego rzędu (przyjmuje inną funkcję)
+        def przetworz_liste(lista_liczb, operacja):
+            wynik = []
+            for liczba in lista_liczb:
+                # Tu następuje "callback" - wywołujemy przekazaną funkcję
+                wynik.append(operacja(liczba))
+            return wynik
+
+        liczby = [1, 2, 3, 4]
+
+        # Używamy callbacku 'podnies_do_kwadratu'
+        kwadraty = przetworz_liste(liczby, podnies_do_kwadratu)
+        print(f"Kwadraty: {kwadraty}") # [1, 4, 9, 16]
+
+        # Używamy callbacku 'dodaj_dwa'
+        dodane = przetworz_liste(liczby, dodaj_dwa)
+        print(f"Dodane dwa: {dodane}") # [3, 4, 5, 6]
