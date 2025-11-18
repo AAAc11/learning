@@ -1,0 +1,19 @@
+Krotka
+    Jest to uporządkowana kolekcja elementów (podobna do listy)
+    Jest niezmienna (niemutowalna)
+
+    Tworzenie:
+        krotka = (1,"a",True)
+
+Zbiory
+    Jest to nieuporządkowana kolekcja unikalnych elementów. Nie ma duplikatów. Jest mutowalna.
+
+    Tworzenie:
+        zbior = {1, 2, 3, 'a'}
+        pusty_zbior = set() # {} tworzy slownik, a nie zbior!
+
+Zbiory zamrozone
+    To samo co zbiory, ale są niemutowalne!
+
+    Tworzenie:
+        moj_zamrozony_zbior = frozenset([1,2,3])
