@@ -1,0 +1,67 @@
+Wyjątek
+    Jest to błąd, który występuje podczas wykonywanmia programu, np. dzielenie przez zero,
+    próba otworzenia nieistniejącego pliku lub zamiana tekstu na liczbę.
+
+Bloki try/except
+    try: tutaj zamieszcza się kod, w którym jest ryzyko wystąpienia błędu
+    except: ten blok jest wykonywany tylko wtedy, gfy w bloku try wystąpił wyjątek.
+
+Łapanie konkrtetnych błędów:
+    try:
+        wynik = 10 / 0
+    except ValueError:
+        print("Błąd wartości")
+    except ZeroDivisionError:
+        print("Nie można dzielić przez zero!") # Ten blok się wykona
+    except Exception as e:
+        print(f"Wystąpił inny, nieznany błąd: {e}")
+
+Bloki else/finally
+    Są dodatkami do try...except:
+        else:
+            Ten blok wykona się jeśli blok try nie wykrył żadnego wyjątku
+        finally:
+            Ten blok zawsze się wykonuje!
+                try:
+                    plik = open("moj_plik.txt", "r")
+                    zawartosc = plik.read()
+                except FileNotFoundError:
+                    print("Nie znaleziono pliku!")
+                else:
+                    # Wykona się tylko, gdy open() się udało
+                    print("Plik wczytany pomyślnie.")
+                    print(zawartosc)
+                finally:
+                    # Wykona się ZAWSZE
+                    print("Zamykanie zasobów...")
+                    # Tutaj normalnie byłoby plik.close(), ale trzeba by sprawdzić,
+                    # czy 'plik' w ogóle zdążył powstać.
+
+Słowo kluczowe raise
+    Służy do ręcznego wywołania wyjątku
+        def ustaw_haslo(haslo):
+            if len(haslo) < 8:
+                # Rzucamy błąd, bo hasło jest niezgodne z naszymi zasadami
+                raise ValueError("Hasło musi mieć co najmniej 8 znaków!")
+            print("Hasło ustawione.")
+
+Tworzenie własnych wyjątków
+        # Najprostsza forma własnego wyjątku
+        class MojaApkaError(Exception):
+            pass
+
+        # Forma rozbudowana, przyjmująca własny komunikat
+        class NazwaUzytkownikaZajetaError(Exception):
+            def __init__(self, uzytkownik):
+                self.uzytkownik = uzytkownik
+                # Wywołujemy konstruktor klasy bazowej (Exception)
+                super().__init__(f"Nazwa użytkownika '{uzytkownik}' jest już zajęta.")
+
+        # Użycie:
+        try:
+            # Jakaś logika sprawdzająca...
+            zajete = True
+            if zajete:
+                raise NazwaUzytkownikaZajetaError("admin")
+        except NazwaUzytkownikaZajetaError as e:
+            print(e)
