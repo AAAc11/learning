@@ -1,0 +1,24 @@
+PRACA Z PLIKAMI
+    Otwarcie pliku należy wykonać przed innymi operacjami
+        open()
+
+    Po otwarciu pliku można wykonywać operacje:
+        -czytania #odczytywania danych z pliku
+        -pisania #zapisywania danych do pliku
+
+    Zamknięcie pliku
+        Po zakończeniu pracy zawsze należy zamknąć plik. Gwarantuje to, że wprowadzone zmiany zostały
+        zapisane na dysku.
+
+        Wyjątkiem jest, jeśli używamy with open(), które automatycznie zamyka plik.
+
+
+    Tryby otwierania pliku
+        Tryby określają, co będziemy z plikiem robić.
+
+        r (read) - tylko do odczytu
+        w (write) - tylko do zapisu. Tworzy nowy plik lub nadpisuje istniejący.
+        a (append) - tylko do nadpisywania. Tworzy nowy plik lub nadpisuje istniejący na samym końcu.
+        r+ (read+write) - do odczytu i zapisu. Plik musi istnieć
+        w+ (write+read) - do zapisu i odczytu. Nadpisuje plik lub tworzy nowy.
+        b (binary) - tryb binarny. Używany do pracy z obrazami, wideo oraz skompresowanymi danymi.

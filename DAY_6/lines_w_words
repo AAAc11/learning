@@ -1,0 +1,3 @@
+        r (read) - tylko do odczytu
+        w (write) - tylko do zapisu. Tworzy nowy plik lub nadpisuje istniejący.
+        a (append) - tylko do nadpisywania. Tworzy nowy plik lub nadpisuje istniejący na samym końcu.
