@@ -1,0 +1,13 @@
+Moduł
+     Jest to plik Pythona (.py), który zawiera kod: definicje funkcji, klas i zmiennych. Moduły
+     pozwalają na organizacje kodu w logiczne jednostki. Służą do ponownego użycia kodu. Zamiast
+     jednego dużego kodu pisze się kilka mniejszych modułów.
+
+     Imporotwanie modułu
+        import nazwa_modulu #importuje cały moduł
+        nazwa_modulu.funkcja() #uzycie danej funkcji z modułu
+        from nazwa_modulu import funkcja, zmienna #importuje tylko funkcje i zmienna z danego modułu
+
+Pakiety
+    Jest to katalog zawierający jeden lub więcej modułów oraz specjalny plik __init__.py
+    Katalog staje się pakietem, jeśli właśnie taki plik zawiera.
