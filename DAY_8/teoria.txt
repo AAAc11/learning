@@ -1,0 +1,29 @@
+Rodzaje importów
+    Służą do udostępniania kodu (funkcji, klas) z jednego modułu w innym.
+
+    Pełny import modułu [np. import math] #importuje cały moduł
+    Import aliasowy [np. import math as m] #importuje cały moduł, ale nadaje mu krótki alias (skrót)
+    Import konkretnych elementów [np. from math import sqrt] #importuje tylko wskazane elementy
+    Import wszystkiego [np. from math import *] #NIEZALECANE - imporuje wszystkie elementy z modułu
+
+Aliasy
+    Służą do skracania nazw długich modułów lub do unikania konfliktów nazw, np.:
+        from module_a import run
+        from module_b import run as run_b # Aliasuje 'run' z module_b
+        run() # Wywołuje z module_a
+        run_b() # Wywołuje z module_b
+
+Struktura projektu (Refaktoryzacja)
+    Dobra struktura projektu (zwłaszcza w przypadku większych aplikacji) zwiększa czytelność
+    oraz ułatwia zarządzanie importami.
+    Przykład czstej struktury:
+        my_app/
+        ├── main.py            # Główny plik startowy
+        ├── services/          # **PAKIET** - zawiera logikę biznesową (np. operacje na danych, obliczenia)
+        │   ├── __init__.py    # Oznacza folder jako pakiet
+        │   ├── data_processor.py # Moduł do obróbki danych
+        │   └── validator.py      # Moduł do walidacji danych
+        ├── models/            # **PAKIET** - zawiera definicje klas/obiektów (modele danych)
+        │   ├── __init__.py
+        │   └── user.py
+        └── requirements.txt
