@@ -1,0 +1,31 @@
+Funkcje Lambda
+    Są to małe, anonimowe funkcje, które można zdefiniować
+    w jednej linijce. Są anonimowe, ponieważ nie mają nazwy
+    Składnia:
+        lambda argumenty: wyrażenie
+
+    Lambdy są najczęściej używane jako argumenty dla innych
+    funkcji (np. map, filter, sorted). Zwracają wynik wyrażenia.
+    np.:
+        lambda x: x * 2  #funkcja, która zwraca x*2
+
+Funkcja map
+    Służy do stosowania określonej funkcji do każdego elementu
+    iterowalnego obiektu i zwraca nowy iterator, zawierający
+    wynik tego zastosowania.
+    Składnia:
+        map(funkcja, iterowalny_obiekt)
+
+Funkcja filter
+    Konstruuje iterator z tych elementów, dla których funkcja
+    jest prawdziwa.
+    Składnia:
+        filter(funkcja, iterowalny_obiekt)
+
+Funkcja reduce
+    Funkcja ta znajduje się w module functools oraz służy do
+    kumulatywnego stosowania funkcji do elementów iterowalnego
+    obiektu, od lewej do prawej, w celu sprawdzenia sekwencji
+    do pojedynczej wartości.
+    Składnia:
+        reduce(funkcja, iterowalny_obiekt, [inicjalizator])
