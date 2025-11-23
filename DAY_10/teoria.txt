@@ -1,0 +1,11 @@
+Generatory
+    Inaczej nazywane są leniwymi iteratorami. Wyglądają jak zwykłe funkcje, jednak zamiast
+    używać return, to używają instrukcji yield.
+    Działanie:
+        Generatory po napotkaniu instrukcji yeld zwraca wartość do argumentu wywołującego, ale zawiesza
+        swój stan lokalny.
+    Wznowienie:
+        Generatory po wznowieniu zaczynają od punktu, w którym wcześniej skończyli.
+    Brak tworzenia listy w pamięci:
+        Kluczową zaletą generatorów jest to, że generują one po jednej wartości na żądanie, zamiast tworzyć
+        i przechowywać całą sekwencję.
