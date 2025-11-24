@@ -1,0 +1,21 @@
+Dekoratory
+    Są to funkcje, które przyjmują inną funkcję jako argument, dodają pewną funkcjonalność, a następnie
+    zwracają zmodyfikowaną funkcję.
+    Kluczowe pojęcia:
+        - Funkcje jako obiekty pierwszej klasy - w Pythonie funkcje mogą być traktowane jak każda inna
+        zmienna. Można je przypisywać do zmiennych, przekazywać jako argumenty do innych funkcji i zwracać
+        z innych funkcji.
+        - Funkcje wewnętrzne - Dekoratory często definiują funkcję wewnątrz siebie. Funkcja ta to
+        opakowująca, która zawiera kod dodający nową funkcjonalność.
+        - Zamknięcia - funkcja wewnętrzna pamięta i ma dostęp do zmiennych z zakresu, w którym została
+        zdefiniowana, nawet po zakończeniu działania funkcji zewnętrznej.
+
+    Składnia:
+        @dekorator
+        def funkcja():
+            pass
+
+        to samo co:
+        def funkcja():
+            pass
+        funkcja = dekorator(funkcja)
