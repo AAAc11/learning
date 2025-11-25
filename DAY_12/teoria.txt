@@ -1,0 +1,22 @@
+Teoria programowania obiektowego
+    OOP (Object-Oriented Programming) to paradygmat programowania, który opiera się na koncepcji
+    obiektów. Obiekt jest instancją klasy i łączy w sobie dane oraz funkcje.
+
+Klasy
+    Jest to 'szablon' lub 'wzor' do tworzenia obiektów.
+    Klasa definiuje:
+        Atrybuty/Pola - dane przechowujące stan obiektu (np. name, age)
+        Metody - funkcje definiujące zacowanie obeiktu (np. is_adult())
+
+Obiekty
+    Jest to konkretna instancja klasy. Każdy obiekt ma swój własny unikalny stan.
+
+Konstruktor __init__
+    Jest to specjalna metoda klasy, nazywana konstruktorem. Jest ona wywoływana automatycznie,
+    gdy tworzymy nowy obiekt klasy oraz służy do inicjalizacji (ustawienia początkowych wartości)
+    atrybutów tego obiektu.
+
+Słowo kluczowe self
+    W Pythonie, wewnątrz definicji klasy, każda metoda musi przyjmować specjalny pierwszy argument,
+    tradycyjnie nazywany self. self jest referencją do samego obiektu, na którym metoda
+    jest wywoływana. Umożliwia to metodom dostęp do atrybutów i innych metod tego konkretnego obiektu.
