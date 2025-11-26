@@ -1,0 +1,12 @@
+Dziedziczenie
+    Jest to mechanizm, który pozwala jednej klasie przejmować atrybuty i metody innej klasy
+    Cel:
+        Umożliwia ponowne wykorzystanie kodu (DRY - Don't repeat yourself) i ustanawia relacje 'jest rodzajem'.
+    Deklaracja:
+        W Pythonie klasę pochodną deklaruje się, umieszczając nazwę klasy bazowej w nawiasie.
+
+Polimorfizm
+    W programowaniu obiektowym polimorfizm pozwala różnym obiektom reagować na to samo wywołanie
+    metody w sposób charakterystyczny dla swojego typu. Polimorfizm opiera się na idei "kaczego typowania",
+    jeśli obiekt ma metodę, której szukamy (np. kwacze jak kaczka), to traktujemy go jakby był kaczką,
+    niezależnie od jego formalnej klasy.
