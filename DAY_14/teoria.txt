@@ -1,0 +1,21 @@
+Hermetyzacja (Enkapsulacja)
+    Jest to jedna z fundamentalnych zasad programowania obiektowego. Polega na:
+        -ukrywaniu danych (zabezpieczeniu wewnętrznego stanu obiektu przed bezpośrednim,
+        niekontrolowanym dostępem i modyfikacją z zewnątrz)
+        -kontrolowaniu dostępu (umożliwieniu dostępu do tych danych tylko poprzez specjalne
+        zdefiniowane metody, takie jak gettery oraz settery)
+
+        W Pythonie atrybuty uznawane są za prywatne, kiedy są poprzedzane:
+            -> pojedynczy podkreśleniem (do użytku wewnętrznego)
+            -> podwójnym podkreśleniem (wywołuje mechanizm zniekształcenia nazw, co utrudnia, ale nie
+            uniemożliwia na bezpośredni dostęp.
+
+Property (Właściwość)
+    Jest to wbudowana w Pythonie funkcja (lub dekorator), która pozwala na użycie metod w taki sposób,
+    że wyglądają i działają jak zwykłe atrybuty obiektu.
+    Stosując dekorator @property, możemy zmienić metody get_salary() i set_salary() na
+    atrybut, do którego odwołujemy się po prostu: obiekt.salary = nowa_wartosc oraz
+    wynagordzenie = obiekt.salary. Dzięki temu kod jest bardziej zgodny ze style Pythona.
+
+
+
