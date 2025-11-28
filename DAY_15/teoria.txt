@@ -1,0 +1,15 @@
+Dataclasses (klasy danych)
+    Jest to moduł, który dostarcza dekorator @dataclass i funkcje do automatycznego
+    generowania metod często używanych w klasach przeznaczonych głównie do przechowywania danych.
+
+    Dataclasses automatycznie generuje metody (np. __init__, __repr__) za nas, co znacznie
+    redukuje ilość boilerplate code (powtarzalnego kodu), cyzniąc klasy krótszymi, czystszymi
+    i łatwiejszymi w utrzymaniu.
+
+   Kluczowe cechy i argumenty
+    Główne argumenty, które można przekazać do dekoratora @dataclass(...):
+    - init=True    #automatycznie generuje metodę __init__
+    - repr=True    #automatycznie generuje metodę __repr__
+    - eq=True    #automatycznie generuje metody __eq__ (porównywanie obiektów)
+    - order=False     #jeśl ustawione na True, generuje metody do porównywania kolejności
+    - frozen=False    #jeśli ustawione na True, obiekty są niezmienne(niemutowalne)
