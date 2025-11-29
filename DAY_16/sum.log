@@ -1,0 +1,6 @@
+2025-11-29 12:53:38,686 - INFO - 2.cal_sum: Received: 7 and 5
+2025-11-29 12:53:38,686 - DEBUG - 2.cal_sum: Sum result: 12
+2025-11-29 12:53:38,686 - INFO - 2.cal_sum: Received: 11 and 4
+2025-11-29 12:53:38,686 - DEBUG - 2.cal_sum: Sum result: 15
+2025-11-29 12:53:38,686 - INFO - 2.cal_sum: Received: 90 and 15
+2025-11-29 12:53:38,686 - DEBUG - 2.cal_sum: Sum result: 105

@@ -1,0 +1,15 @@
+Logowanie (Logging)
+    Jest to proces rejestrowania zdarzeń, które mają miejsce podczas działania aplikacji,
+    co jest niezwykle pomocne w debugowaniu, monitorowaniu i analizowaniu jej zachowania. Zamiast
+    używać prostego drukowania (print()), profesjonalne logowanie oferuje:
+        - poziomy ważności- możesz filtrować wiadomości w zależności od ich znaczenia,
+        - miejsce docelowe- możesz wysyłać logi do pliku, konsoli, bazy danych czy zewnętrznych usług,
+        - formatowanie- logi są automatycznie wzbogacone o znacznik czasu, nazwę modułu i poziom.
+
+    Poziomy logowania w Pythonie
+        Standardowa biblioteka logging w Pythonie definiuje 5 poziomów ważności:
+        - debug- szczegółowe informacje,
+        - info- potwierdzenie, że rzeczy działają zgodnie z oczekiwaniami,
+        - warning- wskazanie, że coś nieoczekiwanego się stało lub że pojawi się problem w przyszłości,
+        - error- poważny problem, spowodowany błędem w logice programu lub błędem zewnętrznym,
+        - critical- krytyczny błąd, oznaczający, że program nie może kontynuować działania
