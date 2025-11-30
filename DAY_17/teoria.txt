@@ -1,0 +1,24 @@
+Type hints
+    Jest to sposób dodawania informacji o oczekiwanych typach danych do kodu w Pythonie. Są
+    one dodawane za pomocą składni z dwukropkiem (:) lda zmiennych i parametrów funkcji oraz
+    ze strzałką (->) lda zwracanej wartości funkcji.
+
+    Do czego służą?:
+    -lepsza czytelność i dokumentacja: Kod staje się bardziej zrozumiały, ponieważ od razu widać, jakich
+    typów danych oczekuje funkcja i jakie zwracają,
+    -ułatwienie pracy narzędziom (Mypy): podpowiedzi pozwalają na symulację statycznego typowania,
+    -wsparcie dla IDE: środowiska mogą używać podpowiedzi typów do zapewnienia lepszego autouzupełniania
+    i wykrywania prostych błędów logicznych, zanim uruchomisz kod.
+
+Mypy
+    Jest to statyczny analizator typów. Jego zadaniem jest przejście przez kod Pythona z podpowiedziami
+    typów i sprawdzenie, czy użycie typów jest spójne.
+
+    Jak działa?:
+        Mypy nie uruchamia twojego kodu. Zamiast tego analizuje składnie i podpowiedzi typów,
+        aby znaleźć potencjalne błędy, takie jak próba dodania liczby do łańcucha znaków, co
+        mogłoby spowodować błąd dopiero w trakcie wykonania programu.
+
+    Ważne:
+        Mypy nie jest częścią samego Pythona. To zewnętrzne narzędzie, które należy zainstalować
+        (pip install mypy) i uruchomić z linii poleceń (mypy nazwa_pliku.py)
