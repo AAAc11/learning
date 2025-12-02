@@ -1,0 +1,27 @@
+Struktura programu:
+    file_analyzer/
+        __init__.py
+        analyzer.py
+        reader.py
+        utils.py
+        report.py
+    main.py
+
+Funkcjonalność:
+-wczytuje plik
+-liczy słowa
+-liczy unikalne słowa
+-liczy linie
+-wykrywa puste linie
+-zapisuje raport do pliku
+-loguje działania do logs.txt
+
+Podział zadań:
+Zaimplementuj moduł reader (wczytywanie pliku),
+Zaimplementuj analyzer (liczenie danych),
+Stwórz klasę FileReport,
+Dodaj logging,
+Dodaj type hints,
+Dodaj obsługę wyjątków (np. brak pliku),
+Napisz main.py,
+Uruchom i przetestuj projekt
