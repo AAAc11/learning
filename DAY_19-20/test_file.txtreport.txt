@@ -1,0 +1,6 @@
+Analysis from 2025-12-04
+File title: test_file.txt
+Number of lines: 27
+Number of words: Counter({'w': 14, 'a': 6, '—': 6, 'z': 4, 'się': 3, 'miała': 3, 'kąpieli': 2, 'co': 2, 'każdy': 1, 'korzysta': 1, 'mucha': 1, 'chciała': 1, 'być': 1, 'czysta': 1, 'niedzielę': 1, 'kąpała': 1, 'smole': 1, 'poniedziałek': 1, 'rosole': 1, 'we': 1, 'wtorek': 1, 'czerwonym': 1, 'winie': 1, 'znowu': 1, 'środę': 1, 'czerninie': 1, 'potem': 1, 'czwartek': 1, 'bigosie': 1, 'piątek': 1, 'tatarskim': 1, 'sosie': 1, 'sobotę': 1, 'soku': 1, 'moreli': 1, 'takich': 1, 'zmartwienie': 1, 'bo': 1, 'brudu': 1, 'lepi': 1, 'cała': 1, 'na': 1, 'myśl': 1, 'jej': 1, 'nie': 1, 'przychodzi': 1, 'żeby': 1, 'wykąpać': 1, 'wodzie': 1})
+Number of unique words: 49
+Number of empty lines: 13

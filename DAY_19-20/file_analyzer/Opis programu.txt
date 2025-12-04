@@ -3,7 +3,7 @@ Struktura programu:
         __init__.py
         analyzer.py
         reader.py
-        utils.py
+        logger.py
         report.py
     main.py
 

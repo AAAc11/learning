@@ -1,4 +1,4 @@
-from analyzer import file_analyzer
+from .analyzer import file_analyzer
 from datetime import date
 
 class FileReport:
@@ -11,9 +11,9 @@ class FileReport:
 
     def saving_report(self):
         with open(f"{self.file_name}report.txt",'w', encoding='utf-8') as f:
-            f.writelines(f"Analysis from {date.today()}")
-            f.writelines(f"File title: {self.file_name}")
-            f.writelines(f"Number of lines: {self.line_counter}")
-            f.writelines(f"Number of words: {self.word_counter}")
-            f.writelines(f"Number of unique words: {self.unique_words}")
-            f.writelines(f"Number of empty lines: {self.empty_line_counter}")
+            f.writelines(f"Analysis from {date.today()}\n")
+            f.writelines(f"File title: {self.file_name}\n")
+            f.writelines(f"Number of lines: {self.line_counter}\n")
+            f.writelines(f"Number of words: {self.word_counter}\n")
+            f.writelines(f"Number of unique words: {self.unique_words}\n")
+            f.writelines(f"Number of empty lines: {self.empty_line_counter}\n")

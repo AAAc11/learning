@@ -1,21 +1,26 @@
-from reader import file_reader
+from .reader import file_reader
 from collections import Counter
+from typing import Counter as CounterType, Tuple, List
 
-def file_analyzer(file_name: str):
+def file_analyzer(file_name):
     line_counter = 0
     empty_line_counter = 0
-    word_counter = 0
-    unique_words = []
+    word_counter = Counter()
+
     context = file_reader(file_name)
+
     for line in context:
-        if line == '':
-            empty_line_counter +=1
-            break
-        line_counter +=1
+        line_counter += 1
 
-        words = line.lower().split()
-        word_counter = Counter(words)
+        if not line.strip():
+            empty_line_counter += 1
+            continue
 
-        unique_words = [word for word, count in word_counter.items() if count == 1]
+        words = line.lower().strip().split()
 
-    return line_counter, word_counter, unique_words, empty_line_counter
+        cleaned_words = [word.strip(".,!?:;\"'()[]{}") for word in words if word.strip()]
+        word_counter.update(cleaned_words)
+
+    unique_word_count = len(word_counter)
+
+    return line_counter, word_counter, unique_word_count, empty_line_counter
