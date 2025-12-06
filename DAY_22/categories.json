@@ -1,0 +1,15 @@
+[
+  {
+    "category": "Elektronika",
+    "items": [
+      {"name": "Telefon", "price": 1000},
+      {"name": "Kamera", "price": 500}
+    ]
+  },
+  {
+    "category": "Książki",
+    "items": [
+      {"name": "Python dla początkujących", "price": 50}
+    ]
+  }
+]
